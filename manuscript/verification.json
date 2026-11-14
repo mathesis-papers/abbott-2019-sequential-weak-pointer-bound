@@ -1,0 +1,180 @@
+{
+  "status": "pass",
+  "scope": "Exact algebra and finite matrix checks supporting the written proofs in note.tex.",
+  "software": {
+    "python": "3.13.5",
+    "numpy": "2.5.4",
+    "sympy": "1.14.0"
+  },
+  "symbolic_checks": [
+    "one-step minimum and eigenvector",
+    "unit norms and overlap",
+    "recurrence increment and invariant interval",
+    "delta recurrence and reciprocal increment"
+  ],
+  "rational_counterexample": {
+    "dimension": 3,
+    "ranks": [
+      1,
+      2,
+      2
+    ],
+    "mean": "-1/6"
+  },
+  "exact_extremizer": {
+    "dimension": 3,
+    "ranks": [
+      2,
+      2,
+      2
+    ],
+    "mean": "-81/448"
+  },
+  "minimum_prefix": [
+    {
+      "n": 1,
+      "minimum": "0"
+    },
+    {
+      "n": 2,
+      "minimum": "-1/8"
+    },
+    {
+      "n": 3,
+      "minimum": "-81/448"
+    },
+    {
+      "n": 4,
+      "minimum": "-279841/1315328"
+    },
+    {
+      "n": 5,
+      "minimum": "-2544564138561/10896040357888"
+    },
+    {
+      "n": 6,
+      "minimum": "-180649849229965076853609601/727984175469831090100011008"
+    },
+    {
+      "n": 7,
+      "minimum": "-825615790842149790807402905932980880902962453909530881/3187605825552515159281215265051962291184460696693506048"
+    },
+    {
+      "n": 8,
+      "minimum": "-16105947742297407273702167541562767369555290135236027608040172698349663412710820478626158852162666237737751041/60232745556317985093392290640449824349723264190030881692249783060128405834932816833447400382588762942370480128"
+    }
+  ],
+  "gaussian_controls": [
+    {
+      "epsilon": 0.5,
+      "normalized_pointer_product": -0.15708167960909114,
+      "absolute_error": 0.009584987057575517
+    },
+    {
+      "epsilon": 0.25,
+      "normalized_pointer_product": -0.16422323102395214,
+      "absolute_error": 0.0024434356427145143
+    },
+    {
+      "epsilon": 0.125,
+      "normalized_pointer_product": -0.16605280130202485,
+      "absolute_error": 0.000613865364641808
+    },
+    {
+      "epsilon": 0.0625,
+      "normalized_pointer_product": -0.16651301151373013,
+      "absolute_error": 0.0001536551529365271
+    },
+    {
+      "epsilon": 0.03125,
+      "normalized_pointer_product": -0.16662824106344146,
+      "absolute_error": 3.842560322520061e-05
+    },
+    {
+      "epsilon": 0.015625,
+      "normalized_pointer_product": -0.1666570595272004,
+      "absolute_error": 9.607139466266679e-06
+    }
+  ],
+  "attainment_controls": [
+    {
+      "n": 1,
+      "dimension": 1,
+      "projection_rank": 0,
+      "minimum_eigenvalue": 0.0,
+      "predicted_minimum": -0.0,
+      "maximum_eigenvector_residual": 0.0
+    },
+    {
+      "n": 2,
+      "dimension": 2,
+      "projection_rank": 1,
+      "minimum_eigenvalue": -0.12499999999999996,
+      "predicted_minimum": -0.125,
+      "maximum_eigenvector_residual": 7.632783294297951e-17
+    },
+    {
+      "n": 3,
+      "dimension": 3,
+      "projection_rank": 2,
+      "minimum_eigenvalue": -0.1808035714285714,
+      "predicted_minimum": -0.18080357142857142,
+      "maximum_eigenvector_residual": 7.632783294297951e-17
+    },
+    {
+      "n": 4,
+      "dimension": 4,
+      "projection_rank": 3,
+      "minimum_eigenvalue": -0.21275377700467102,
+      "predicted_minimum": -0.21275377700467105,
+      "maximum_eigenvector_residual": 1.3455014484288012e-16
+    },
+    {
+      "n": 8,
+      "dimension": 8,
+      "projection_rank": 7,
+      "minimum_eigenvalue": -0.26739521158367663,
+      "predicted_minimum": -0.26739521158367674,
+      "maximum_eigenvector_residual": 1.4817422638912102e-16
+    },
+    {
+      "n": 16,
+      "dimension": 16,
+      "projection_rank": 15,
+      "minimum_eigenvalue": -0.29860032280109766,
+      "predicted_minimum": -0.29860032280109783,
+      "maximum_eigenvector_residual": 2.454250578296984e-16
+    },
+    {
+      "n": 32,
+      "dimension": 32,
+      "projection_rank": 31,
+      "minimum_eigenvalue": -0.315450081226527,
+      "predicted_minimum": -0.31545008122652707,
+      "maximum_eigenvector_residual": 2.540052226568824e-16
+    },
+    {
+      "n": 64,
+      "dimension": 64,
+      "projection_rank": 63,
+      "minimum_eigenvalue": -0.32424627275016454,
+      "predicted_minimum": -0.32424627275016527,
+      "maximum_eigenvector_residual": 3.840914392954655e-16
+    }
+  ],
+  "random_control_count": 360,
+  "random_seed": 20261005,
+  "sibling_checks": {
+    "symbolic_gaussian_map_decomposition": true,
+    "symbolic_final_pointer_independence": true,
+    "finite_controls": {
+      "finite_gaussian_envelopes": 144,
+      "positive_contractions": 144,
+      "commuting_projection_products": 144,
+      "hermitian_norm_bounds": 144
+    },
+    "commuting_maximum_discrepancy": 0.0,
+    "seed": 20261113
+  },
+  "numeric_absolute_tolerance": 1e-11
+}

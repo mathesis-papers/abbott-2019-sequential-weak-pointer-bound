@@ -1,0 +1,62 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 88686,
+      "matches_public": null,
+      "path": "paper.pdf",
+      "public_sha256": null,
+      "sha256": "e4ca73e37356301dc848fd0b91405066a52c8a635666ec10b3e5176e75cb0347"
+    },
+    "source": {
+      "bytes": 15823,
+      "matches_public": null,
+      "path": "source.archive",
+      "public_sha256": null,
+      "sha256": "98ca2b3100b6a0d6d57ee2e1e44a2364c7c6370d874a23017d567daadaa431b6"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "Extending the spectral bounds of Sun, Luo and Ye [Mathematics of Operations Research 45, 233–271 (2020)], we refute the arbitrary-rank interpretation of the pointer-product conjecture of Abbott, Silva, Wechs, Brunner and Branciard [Quantum 3, 194 (2019), Section 4, p. 5, after equation (26); arXiv:1805.09364v3]. Three orthogonal projections on C^3 give the normalized weak-limit pointer product -1/6 < -1/8. For n measurements in unrestricted finite dimension, the exact minimum is -c_n, where c_1=0 and c_(n+1)=(1+c_n)^2/[8(1-c_n)]. Codimension-one projections attain every finite-length minimum, and c_n increases to 1/3. Thus pointer products have infimum -1/3, separated by 2/3 from the limiting ordered weak value -1. The same bounds hold as envelopes at every finite coupling strength for independent centered Gaussian pointers.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "ea30c256f9857dcf2582db122a9570836d8a5f18",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/ea30c256f9857dcf2582db122a9570836d8a5f18/D5/S3/Quantum/Measurement/Weak/SequentialWeakPointerRefutation.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "url": "/api/v1/collected-papers/abbott-2019-sequential-weak-pointer-bound/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-14T19:59:33.895606773Z",
+    "record": "abbott-2019-sequential-weak-pointer-bound",
+    "repository_name": "abbott-2019-sequential-weak-pointer-bound",
+    "source": {
+      "url": "/api/v1/collected-papers/abbott-2019-sequential-weak-pointer-bound/files/source?version=2"
+    },
+    "title": "Extending Sun–Luo–Ye bounds to refute Abbott et al.'s pointer-product conjecture",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-14T19:59:33.895606773Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "abbott-2019-sequential-weak-pointer-bound"
+  }
+}

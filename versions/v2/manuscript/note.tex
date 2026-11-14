@@ -1,0 +1,364 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,array,microtype}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\Id}{I}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\J}{\mathcal J}
+\setlength{\emergencystretch}{2em}
+\hypersetup{pdftitle={Extending Sun--Luo--Ye bounds to refute Abbott et al.'s pointer-product conjecture},pdfauthor={Haobo Ma; Wenlin Zhang}}
+\title{Extending Sun--Luo--Ye bounds to refute\\Abbott et al.'s pointer-product conjecture}
+\author{Haobo Ma\textsuperscript{1}\qquad Wenlin Zhang\textsuperscript{2,1}\\[4pt]
+\small\textsuperscript{1}ChronoAI Pte Ltd, Singapore\\
+\small\textsuperscript{2}National University of Singapore}
+\date{13 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Extending the spectral bounds of Sun, Luo and Ye
+[\emph{Mathematics of Operations Research} \textbf{45}, 233--271 (2020)],
+we refute the arbitrary-rank interpretation of the pointer-product conjecture
+of Abbott, Silva, Wechs, Brunner and Branciard
+[\emph{Quantum} \textbf{3}, 194 (2019), Section~4, p.~5, after equation~(26);
+arXiv:1805.09364v3]. Three orthogonal projections on $\mathbb C^3$
+give the normalized weak-limit pointer product $-1/6<-1/8$.
+For $n$ measurements in unrestricted finite dimension, the exact minimum is
+$-c_n$, where $c_1=0$ and $c_{n+1}=(1+c_n)^2/[8(1-c_n)]$.
+Codimension-one projections attain every finite-length minimum, and
+$c_n\uparrow1/3$. Thus pointer products have infimum $-1/3$, separated
+by $2/3$ from the limiting ordered weak value $-1$.
+The same bounds hold as envelopes at every finite coupling strength
+for independent centered Gaussian pointers.
+\end{abstract}
+
+\section{The conjecture and the quantity}
+
+Abbott et al.\ \cite[Section~4, p.~5, paragraph following (26)]{abbott}
+conjecture an all-length lower bound $-1/8$ for the mean product of pointer
+positions in sequential weak measurements of projection observables without
+post-selection. Their Appendix~C proves the two-projection case for arbitrary
+ranks. The all-length passage does not specify ranks or the dimension of its
+numerical search. We consider its finite-dimensional arbitrary-rank
+interpretation, with projection eigenvalues $0,1$.
+Their precise status word is ``conjecture'': ``we were unable to obtain a
+value smaller than $-1/8$, and we conjecture that this is in fact the case
+for all $n$.'' A rank-one restriction is not stated in that passage.
+
+Let $P_j=P_j^*=P_j^2$ act on $\mathbb C^d$, $d\geq1$, and let
+$\rho\succeq0$, $\tr\rho=1$. Define
+\begin{equation}\label{eq:quantity}
+ \J_P(X)=\frac{PX+XP}{2},\qquad
+ X_n=P_n,\quad X_j=\J_{P_j}(X_{j+1}),\qquad
+ \mu_n=\tr(\rho X_1).
+\end{equation}
+For $n\geq2$ this is precisely the normalized nested anticommutator in
+\cite[equation (A42), p.~14]{abbott}; $\mu_1=\tr(\rho P_1)$.
+The inner product is conjugate-linear in its first entry.
+
+Here the weak limit is taken at fixed $n$, states and projections. More
+explicitly, start with independent centered real Gaussian pointers
+$\phi_j(x)=(2\pi\sigma_j^2)^{-1/4}e^{-x^2/(4\sigma_j^2)}$, $\sigma_j>0$,
+and apply $\exp(-i\varepsilon g_jP_j\otimes p_j)$ chronologically, with
+$g_j>0$ and $\hbar=1$. Then
+\begin{equation}\label{eq:limit}
+ \mu_n=\lim_{\varepsilon\downarrow0}
+ \frac{\mathbb E_\varepsilon[x_1\cdots x_n]}
+ {\varepsilon^n\prod_jg_j}.
+\end{equation}
+Indeed, for $h=\varepsilon g$, completing the square gives
+\[
+ \int_{\mathbb R}x\phi(x-ah)\phi(x-bh)\,dx
+ =\frac{h(a+b)}2e^{-h^2(a-b)^2/(8\sigma^2)}\quad(a,b\in\{0,1\}).
+\]
+With $E_0=\Id-P$, $E_1=P$, integration against $x/h$ induces
+\[
+ Y\longmapsto\sum_{a,b\in\{0,1\}}
+ \frac{a+b}{2}e^{-h^2(a-b)^2/(8\sigma^2)}E_aYE_b.
+\]
+This converges to $\J_P(Y)$. Composition for fixed $n$, followed by
+$\tr(A\J_P(B))=\tr(\J_P(A)B)$, proves
+\eqref{eq:limit} and \eqref{eq:quantity}. The bounds below concern this
+coefficient; Corollary~\ref{cor:gaussian} also gives a finite-strength envelope
+for these Gaussian pointers.
+
+Sun, Luo and Ye \cite[Sections~6.2 and~6.4; equations (78), (80), (118)
+of arXiv:1503.06387v3]{sun} study the same Jordan recursion and the
+invariant interval $[-\Id/3,\Id]$ in randomized optimization.
+Under $\alpha_n=1/3-c_n$, their recurrence (80) is the recurrence below,
+and (118) gives its asymptotic rate. We give the short spectral argument
+and an explicit construction attaining its endpoints at every length
+in the pointer problem. Their Jordan-product estimate is attributed to
+Strang~\cite{strang}; see their Lemma~5 and equation~(76).
+The recurrence and its rate are prior results, not new scalar formulas.
+
+\section{Sharp finite-length bounds and the gap}
+
+\begin{theorem}\label{thm:main}
+Put $c_1=0$ and $c_{r+1}=F(c_r)$, where
+\[
+ F(c)=\frac{(1+c)^2}{8(1-c)}.
+\]
+For all $n\geq1$, all finite $d$, all orthogonal projections
+$P_1,\ldots,P_n$ and all density matrices $\rho$,
+\[
+ -c_n\leq\mu_n\leq1.
+\]
+The lower bound is attained in dimension $n$ by real codimension-one
+projections and a pure state; for $n=1$ the zero projection suffices.
+Furthermore $0\leq c_n<1/3$, $c_n\uparrow1/3$, and
+\[
+ c_2=\frac18,\qquad c_3=\frac{81}{448},\qquad
+ c_4=\frac{279841}{1315328},\qquad
+ \frac13-c_n\sim\frac{16}{27n}.
+\]
+Consequently the uniform infimum is $-1/3$, not attained at any finite
+length. The upper bound $1$ is attained.
+\end{theorem}
+
+\begin{proof}
+Suppose $0\leq c\leq1/3$ and $-c\Id\preceq X\preceq\Id$.
+Write $X=a\Id+bH$ with $a=(1-c)/2$, $b=(1+c)/2$ and
+$H=H^*$, $\|H\|\leq1$. For a unit vector $\psi$, let
+$s=\|P\psi\|\in[0,1]$. Since $\langle\psi,P\psi\rangle=s^2$,
+Cauchy--Schwarz yields
+\[
+ as^2-bs\leq\langle\psi,\J_P(X)\psi\rangle
+ =as^2+b\operatorname{Re}\langle P\psi,H\psi\rangle
+ \leq as^2+bs\leq1.
+\]
+The lower quadratic has its minimum at
+$y=b/(2a)=(1+c)/[2(1-c)]\in[1/2,1]$; that minimum is
+$-b^2/(4a)=-F(c)$. Hence
+\begin{equation}\label{eq:step}
+ -F(c)\Id\preceq\J_P(X)\preceq\Id.
+\end{equation}
+The identities
+\begin{equation}\label{eq:identities}
+ F(c)-c=\frac{(1-3c)^2}{8(1-c)},\qquad
+ \frac13-F(c)=\frac{(1-3c)(c+5)}{24(1-c)}
+\end{equation}
+show that $c_n$ increases strictly from $0$ while remaining below $1/3$.
+Starting with $0\preceq P_n\preceq\Id$, iteration of
+\eqref{eq:step} proves $-c_n\Id\preceq X_1\preceq\Id$.
+Taking a density-matrix expectation proves the claimed bounds.
+Continuity and the first identity in \eqref{eq:identities} force the
+increasing limit to be $1/3$. Taking every $P_j=\Id$ attains the upper bound.
+
+For sharpness, first consider $X=\operatorname{diag}(1,-c)$ on
+$\mathbb R^2$. Set
+\[
+ \alpha=\sqrt{(1-y)/2},\quad \beta=\sqrt{(1+y)/2},\quad
+ \psi=(\alpha,\beta)^{\mathsf T},\quad
+ p=(-\alpha,\beta)^{\mathsf T},\quad P=pp^{\mathsf T}.
+\]
+Both vectors are unit and $\langle p,\psi\rangle=y$.
+Since $H=\operatorname{diag}(1,-1)$ gives $p=-H\psi$, direct substitution
+gives
+\begin{equation}\label{eq:equality}
+ \J_P(X)\psi
+ =\frac{(2ay-b)p-by\psi}{2}=-F(c)\psi.
+\end{equation}
+To iterate this equality, fix the orthonormal basis
+$e_0,\ldots,e_{n-1}$ of $\mathbb R^n$ and start with
+$X^{(1)}=P_n=\Id-e_0e_0^{\mathsf T}$, $v_1=e_0$.
+Inductively maintain
+\[
+ X^{(r)}v_r=-c_rv_r,\quad \|v_r\|=1,\quad
+ v_r\in\operatorname{span}(e_0,\ldots,e_{r-1}),\quad
+ X^{(r)}e_k=e_k\ (k\geq r).
+\]
+For $1\leq r<n$, form $y_r,\alpha_r,\beta_r$ from $c_r$ as above, and put
+\begin{equation}\label{eq:construction}
+ \begin{split}
+ q_r&=\beta_re_r+\alpha_rv_r,\qquad
+ P_{n-r}=\Id-q_rq_r^{\mathsf T},\\
+ v_{r+1}&=\alpha_re_r+\beta_rv_r,\qquad
+ X^{(r+1)}=\J_{P_{n-r}}(X^{(r)}).
+ \end{split}
+\end{equation}
+The vectors $q_r,v_{r+1}$ are unit. On the reducing span of $e_r,v_r$,
+$X^{(r)}$ is $\operatorname{diag}(1,-c_r)$, and $P_{n-r}$ projects onto
+$-\alpha_re_r+\beta_rv_r$. Equation \eqref{eq:equality} proves the next
+minimum eigenvector identity. All $e_k$, $k>r$, remain fixed by both
+operators. This completes the induction. Thus the resulting right-nested
+product has expectation $-c_n$ in the pure state $v_nv_n^{\mathsf T}$.
+The construction also embeds into every $d\geq n$ by adjoining identity
+blocks to the projections.
+
+Finally, put $\delta_n=1/3-c_n$. Substitution gives
+\[
+ \delta_{n+1}=\delta_n\frac{16-3\delta_n}{16+24\delta_n},\qquad
+ \frac1{\delta_{n+1}}-\frac1{\delta_n}
+ =\frac{27}{16-3\delta_n}\longrightarrow\frac{27}{16}.
+\]
+Ces\`aro averaging of these increments yields
+$(n\delta_n)^{-1}\to27/16$, proving the stated asymptotic.
+\end{proof}
+
+At $c=1/3$, \eqref{eq:step} says that every Jordan map preserves
+$[-\Id/3,\Id]$. This is the reason for the gap above $-1$:
+the pointer coefficient uses repeated symmetrization, rather than the
+single ordered product $w_n=\tr(\rho P_n\cdots P_1)$.
+Abbott et al.\ \cite[equation (25)]{abbott} construct ordered values
+$w_n=-\cos^{n+1}(\pi/(n+1))\to-1$. In contrast,
+$\mu_n+1\geq1-c_n>2/3$, and these sharp gaps decrease to $2/3$.
+
+\begin{corollary}[Positive contractions]\label{cor:effects}
+The same exact extrema hold for positive contractions $0\preceq A_j\preceq\Id$
+in the nested Jordan expectation.
+\end{corollary}
+\begin{proof}
+Indeed, spectral decomposition writes each $A_j$ as a convex combination
+of projections: for distinct positive eigenvalues
+$0<\lambda_1<\cdots<\lambda_k\leq1$, use
+$A_j=\sum_{i=1}^k(\lambda_i-\lambda_{i-1})
+\mathbf1_{[\lambda_i,1]}(A_j)$, $\lambda_0=0$, and add the zero
+projection with weight $1-\lambda_k$. The zero operator needs just itself.
+Multilinearity of \eqref{eq:quantity} makes its expectation a convex
+combination of projection cases; projections already attain the endpoints.
+\end{proof}
+
+\begin{corollary}[Finite-strength Gaussian envelope]\label{cor:gaussian}
+For the independent centered real Gaussian pointers above, let each
+coupling $h_j>0$ be arbitrary and write
+$m_n=\mathbb E[x_1\cdots x_n]/\prod_j h_j$.
+Then $-c_n\leq m_n\leq1$ at every coupling strength. The final pointer's
+width and coupling do not affect $m_n$.
+\end{corollary}
+\begin{proof}
+The exact Gaussian integral above gives the moment map
+\[
+ T_{P,t}(Y)=t\J_P(Y)+(1-t)PYP,\qquad
+ t=e^{-h^2/(8\sigma^2)}\in(0,1].
+\]
+Consequently $m_n=\tr[\rho T_{P_1,t_1}\cdots
+T_{P_n,t_n}(\Id)]$, and $T_{P_n,t_n}(\Id)=P_n$ independently of $t_n$.
+If $-c\Id\preceq Y\preceq\Id$, then
+$-c\Id\preceq PYP\preceq\Id$, whereas
+$-F(c)\Id\preceq\J_P(Y)\preceq\Id$ by \eqref{eq:step}.
+Since $F(c)\geq c$ for $0\leq c\leq1/3$, their convex combination
+lies in $[-F(c)\Id,\Id]$. Induction proves the bound.
+The sharp weak-limit minima are not asserted to be attained at prescribed
+positive couplings. As the couplings tend to zero, the constructions of
+Theorem~\ref{thm:main} approach them, so the envelope is sharp when
+coupling strengths can vary.
+\end{proof}
+
+\begin{corollary}[Commuting and symmetric observables]\label{cor:commuting}
+For commuting projection observables, $0\leq\mu_n\leq1$; the same holds
+for $m_n$ above. For arbitrary Hermitian observables $A_j$, their nested
+Jordan coefficient has absolute value at most $\prod_j\|A_j\|$.
+If each spectrum is symmetric about zero, this coefficient lies within
+the extreme products of spectral values.
+\end{corollary}
+\begin{proof}
+For commuting projections both the Jordan recursion and the Gaussian
+moment recursion reduce to $P_1\cdots P_n$, an orthogonal projection.
+For Hermitian $A,Y$, the operator-norm inequality
+$\|(AY+YA)/2\|\leq\|A\|\|Y\|$ proves the second assertion by induction
+and $|\tr(\rho Y)|\leq\|Y\|$.
+Symmetric spectra contain both $\|A_j\|$ and $-\|A_j\|$ unless
+$A_j=0$; hence the extreme products are $\pm\prod_j\|A_j\|$.
+\end{proof}
+
+\section{A rational counterexample}
+
+For a particularly simple witness, take $\psi=e_3=(0,0,1)^{\mathsf T}$ and
+\[
+ P_1=\frac13\begin{pmatrix}1&1&-1\\1&1&-1\\-1&-1&1\end{pmatrix},\quad
+ P_2=\begin{pmatrix}1&0&0\\0&1/2&1/2\\0&1/2&1/2\end{pmatrix},\quad
+ P_3=\begin{pmatrix}1/2&0&1/2\\0&1&0\\1/2&0&1/2\end{pmatrix}.
+\]
+For the unit vectors $u=(1,1,-1)^{\mathsf T}/\sqrt3$,
+$v=(0,1,-1)^{\mathsf T}/\sqrt2$, $w=(1,0,-1)^{\mathsf T}/\sqrt2$,
+these are $uu^*$, $\Id-vv^*$, $\Id-ww^*$, of ranks $(1,2,2)$.
+Thus every required projection identity holds. With $B=P_2P_3+P_3P_2$,
+\[
+ B=\begin{pmatrix}1&1/4&3/4\\1/4&1&3/4\\3/4&3/4&1/2\end{pmatrix},\quad
+ P_1e_3=(-1,-1,1)^{\mathsf T}/3,\quad
+ Be_3=(3/4,3/4,1/2)^{\mathsf T}.
+\]
+Consequently,
+\[
+ \boxed{\mu_3=\tfrac14\langle e_3,(P_1B+BP_1)e_3\rangle
+ =\tfrac12\operatorname{Re}\langle P_1e_3,Be_3\rangle
+ =-\tfrac16<-\tfrac18.}
+\]
+Theorem~\ref{thm:main} gives the smaller attained value $-81/448$;
+the rational witness alone already disproves the conjectured bound.
+
+\section{Coverage and verification}
+
+\begin{center}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\linewidth}>{\raggedright\arraybackslash}p{0.60\linewidth}@{}}
+\toprule
+Source item in \cite{abbott} & Mathematical coverage\\
+\midrule
+Section 4, after (26) & Refuted and corrected for arbitrary ranks:
+the exact minimum is $-c_n$.\\
+Appendix C, (A45) & Prior two-projection bound recovered:
+$c_2=1/8$.\\
+Section 4, question before (22) & Answered: yes for ordered weak values
+by the source's (25), and for arbitrary-rank pointer products by
+Theorem~\ref{thm:main}.\\
+Section 4, (25)--(26) & Ordered values can approach $-1$;
+pointer products have sharp uniform infimum $-1/3$.\\
+Section 3, (21), and p.~5, symmetric spectra & Prior non-anomaly
+statement recovered in Corollary~\ref{cor:commuting}.\\
+Section 5, commuting or tensor-product measurements & Prior non-anomaly
+statement recovered in Corollary~\ref{cor:commuting}.\\
+Appendix B.3, p.~14, final-measurement strength & Prior independence
+statement recovered in Corollary~\ref{cor:gaussian}.\\
+Positive contractions; arbitrary finite Gaussian strengths & Not posed
+as conjectures; proved in Corollaries~\ref{cor:effects}--\ref{cor:gaussian}.\\
+Section 5, channel-capacity and indefinite-causal-order questions & Not covered
+by these spectral bounds.\\
+\bottomrule
+\end{tabular}
+\end{center}
+The all-rank-one problem for $n\geq3$, minima with prescribed $d<n$,
+and exact minima at prescribed nonzero Gaussian couplings are not covered.
+The source's contextuality and time-asymmetry suggestions in Section~5,
+and its post-selected and mixed position--momentum formulas in
+Appendix~B, are also outside this note's conclusions.
+
+The general bounds, attainment, asymptotic rate and all three corollaries
+have written proofs above. The accompanying \texttt{verify.py}
+checks the rational witness exactly, the scalar and two-dimensional
+identities symbolically, an exact three-dimensional extremizer, and
+finite numerical instances of the full construction and the Gaussian
+envelope, together with commuting and symmetric-observable controls.
+The pinned Lean declaration
+\href{https://github.com/the-omega-institute/trureturing/blob/ea30c256f9857dcf2582db122a9570836d8a5f18/D5/S3/Quantum/Measurement/Weak/SequentialWeakPointerRefutation.lean}{\texttt{SequentialWeakPointerRefutation.result}}
+states the negation of the universal $-1/8$ claim for the nested-product
+definition and proves it with the displayed rational witness.
+Its parameter $n=2$ denotes three observables. Its scope is that witness
+and refutation, whereas Theorem~\ref{thm:main} and the Gaussian limit
+have the written proofs given here.
+
+\begin{thebibliography}{3}
+\bibitem{abbott}
+A. A. Abbott, R. Silva, J. Wechs, N. Brunner and C. Branciard,
+\emph{Anomalous Weak Values Without Post-Selection},
+Quantum \textbf{3}, 194 (2019).
+\href{https://doi.org/10.22331/q-2019-10-14-194}{doi:10.22331/q-2019-10-14-194}.
+\href{https://arxiv.org/abs/1805.09364v3}{arXiv:1805.09364v3}.
+\bibitem{sun}
+R. Sun, Z.-Q. Luo and Y. Ye,
+\emph{On the Efficiency of Random Permutation for ADMM and Coordinate Descent},
+Mathematics of Operations Research \textbf{45}(1), 233--271 (2020).
+\href{https://doi.org/10.1287/moor.2019.0990}{doi:10.1287/moor.2019.0990}.
+Equation and section locators refer to
+\href{https://arxiv.org/abs/1503.06387v3}{arXiv:1503.06387v3}.
+\bibitem{strang}
+W. Gilbert Strang,
+\emph{Eigenvalues of Jordan Products},
+The American Mathematical Monthly \textbf{69}(1), 37--40 (1962).
+\href{https://doi.org/10.2307/2312733}{doi:10.2307/2312733}.
+\end{thebibliography}
+\noindent\small\copyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+\end{document}
