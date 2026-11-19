@@ -1,0 +1,127 @@
+{
+  "voice": "af_heart",
+  "speed": 0.94,
+  "say": {},
+  "music": {
+    "bpm": 80,
+    "progression": "a-minor"
+  },
+  "scenes": [
+    {
+      "id": "readings",
+      "name": "READINGS",
+      "lead": 0.8,
+      "tail": 1,
+      "lines": [
+        [
+          "Three pointers start near zero. In one run each can end to the left or the right.",
+          "三支指针都从零附近出发。每轮结束时，它们可以停在零点左边或右边。"
+        ],
+        [
+          "Multiply the signed readings and average over all runs. Divide by the product of the three coupling strengths.",
+          "把有正负号的读数相乘，再对所有轮次求平均，最后除以三个耦合强度的乘积。"
+        ],
+        [
+          "Abbott and colleagues asked if the weak limit stays above or at minus one eighth, even with more than two measurements.",
+          "Abbott 等人问，即使测量超过两次，弱极限是否仍大于等于负八分之一？"
+        ]
+      ]
+    },
+    {
+      "id": "orders",
+      "name": "ORDER",
+      "lead": 0.55,
+      "tail": 0.9,
+      "lines": [
+        [
+          "A projection keeps the part of an arrow along a line or inside a plane.",
+          "投影保留箭头沿直线或在平面内的分量。"
+        ],
+        [
+          "Start at zero, one. Project to the diagonal and then to the horizontal axis. You reach one half, zero.",
+          "从坐标 (0,1) 出发，先投到对角线，再投到横轴，得到 (1/2,0)。"
+        ],
+        [
+          "Reverse these two operations and you reach zero immediately.",
+          "反过来先投到横轴，立刻得到零。"
+        ],
+        [
+          "The pointer calculation brings in one projection at a time and averages the two multiplication orders.",
+          "计算指针系数时，每次加入一个投影，并平均两种乘法次序。"
+        ]
+      ]
+    },
+    {
+      "id": "witness",
+      "name": "WITNESS",
+      "lead": 0.55,
+      "tail": 1,
+      "lines": [
+        [
+          "Now use three dimensions and start along the third axis.",
+          "现在转到三维空间，从第三坐标轴的单位向量出发。"
+        ],
+        [
+          "One plane projection averages the last two coordinates. The other averages the first and third. Add their two orders.",
+          "一个平面投影平均后两个坐标，另一个平均第一、第三坐标。把两个次序的结果相加。"
+        ],
+        [
+          "The first projection, onto a line, gives two negative coordinates and one positive coordinate.",
+          "第一个投影保留一条直线，给出两个负坐标和一个正坐标。"
+        ],
+        [
+          "Take half the dot product. The two negative contributions dominate, giving minus one sixth, below minus one eighth.",
+          "取点积的一半。两个负的贡献占优，得到负六分之一，低于负八分之一。"
+        ]
+      ]
+    },
+    {
+      "id": "quadratic",
+      "name": "ONE STEP",
+      "lead": 0.55,
+      "tail": 1,
+      "lines": [
+        [
+          "To find the sharp floor, suppose the current eigenvalues are between minus c and one.",
+          "要找精确下界，设当前特征值都在负 c 和一之间。"
+        ],
+        [
+          "Let s be the length of the projected unit state. It ranges from zero to one.",
+          "令 s 为单位态经过投影后的长度。它介于零和一之间。"
+        ],
+        [
+          "The smallest possible expectation is bounded by this quadratic. Its lowest point gives the next floor.",
+          "这个二次函数从下方控制期望。它的最低点给出下一步的下界。"
+        ],
+        [
+          "A projection in a plane spanned by the current bottom direction and a fresh unit direction can attain the bound.",
+          "用当前最低特征值的方向与一个新方向构成平面。在该平面选择投影，就能达到下界。"
+        ]
+      ]
+    },
+    {
+      "id": "lengths",
+      "name": "LENGTHS",
+      "lead": 0.55,
+      "tail": 1.35,
+      "lines": [
+        [
+          "Start with a floor of zero for one projection. For two it is minus one eighth.",
+          "一次投影的下界是零。两次投影时，下界是负八分之一。"
+        ],
+        [
+          "For three it is minus eighty-one over four hundred forty-eight. The rational example already breaks the conjectured bound.",
+          "三次投影的精确下界是负四百四十八分之八十一。有理数反例已经打破了猜想的下界。"
+        ],
+        [
+          "The sharp floors approach minus one third as the length grows. Every finite length stays above it.",
+          "长度增加时，精确下界趋近负三分之一。每个有限长度的下界都比它高。"
+        ],
+        [
+          "Lean verifies the three-measurement refutation. The all-length argument is in the paper by Haobo Ma and Wenlin Zhang.",
+          "Lean 验证三次测量推翻下界的结论。任意长度的证明见 Haobo Ma 与 Wenlin Zhang 的论文。"
+        ]
+      ]
+    }
+  ]
+}

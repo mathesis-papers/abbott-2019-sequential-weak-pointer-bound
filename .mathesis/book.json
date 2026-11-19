@@ -1,0 +1,66 @@
+{
+  "book": "abbott-2019-sequential-weak-pointer-bound",
+  "pending_claims": [],
+  "results": {
+    "commuting-symmetric": {
+      "claim": "collected:abbott-2019-sequential-weak-pointer-bound:2:s4",
+      "compared_public_gid": "D5/S3/Quantum/Algebra/CommutingProjectionFourSector.commuting_projection_four_sector_criterion",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "variant",
+      "formalization_request": {
+        "label": "Corollary 4 — Commuting and symmetric observables",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/277"
+      },
+      "gids": []
+    },
+    "gaussian-envelope": {
+      "claim": "collected:abbott-2019-sequential-weak-pointer-bound:2:s3",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "none",
+      "formalization_request": {
+        "label": "Corollary 3 — Finite-strength Gaussian envelope",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/276"
+      },
+      "gids": []
+    },
+    "pointer-refutation": {
+      "claim": "collected:abbott-2019-sequential-weak-pointer-bound:2:s1",
+      "compared_public_gid": "D5/S3/Quantum/Measurement/Weak/SequentialWeakPointerRefutation.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "same",
+      "gids": [
+        "D5/S3/Quantum/Measurement/Weak/SequentialWeakPointerRefutation.result"
+      ]
+    },
+    "positive-contractions": {
+      "claim": "collected:abbott-2019-sequential-weak-pointer-bound:2:s2",
+      "compared_public_gid": "D5/S3/Quantum/Measurement/Weak/SequentialWeakPointerRefutation.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "variant",
+      "formalization_request": {
+        "label": "Corollary 2 — Positive contractions",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/275"
+      },
+      "gids": []
+    },
+    "sharp-bounds": {
+      "claim": "collected:abbott-2019-sequential-weak-pointer-bound:2:s1",
+      "compared_public_gid": "D5/S3/Quantum/Measurement/Weak/SequentialWeakPointerRefutation.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "comparison_verdict": "variant",
+      "formalization_request": {
+        "label": "Theorem 1 — Sharp finite-length bounds",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/274"
+      },
+      "gids": []
+    }
+  },
+  "stage": "complete",
+  "titles": {
+    "en": "Extending Sun–Luo–Ye bounds to refute Abbott et al.'s pointer-product conjecture",
+    "zh": "Extending Sun–Luo–Ye bounds to refute Abbott et al.'s pointer-product conjecture"
+  },
+  "version": 2,
+  "work": "abbott-2019-sequential-weak-pointer-bound"
+}

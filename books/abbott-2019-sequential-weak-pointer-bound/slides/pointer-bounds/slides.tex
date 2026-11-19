@@ -1,0 +1,164 @@
+\documentclass{beamer}
+\input{tbook-deck}
+\title{弱测量指针乘积的精确下界}
+\author{Haobo Ma\inst{1} \and Wenlin Zhang\inst{1,2}}
+\institute{\inst{1}ChronoAI Pte Ltd, Singapore \and \inst{2}National University of Singapore}
+\date{版本 2}
+\begin{document}
+% Manuscript: §1, §§2–3
+\begin{frame}
+\titlepage
+\note{先提出问题。三个读数相乘取平均会低到哪里？报告以有理数反例和每步取等构造为主线。}
+\end{frame}
+
+% Manuscript: §§1–4
+\begin{frame}{报告提纲}
+\tableofcontents
+\note{先推导要计算的量，再给出精确界、有限强度推广和证据范围。}
+\end{frame}
+
+\section{问题与反例}
+\subsection{读数与次序}
+% Manuscript: §1, equations (1)–(2)
+\begin{frame}{一次实验记下什么？}
+每次耦合有一支初始中心为零的指针。投影的两个分量对应平移 $0$ 或 $h_j$。每轮使用全部 $n$ 个读数。
+\[
+ m_n=\frac{\mathbb E[x_1\cdots x_n]}{h_1\cdots h_n},
+ \qquad \mu_n=\lim_{\varepsilon\downarrow0}m_n,\quad h_j=\varepsilon g_j.
+\]
+Abbott 等人在两次投影时证明 $\mu_2\ge-1/8$，并对所有长度提出同一下界。
+\note{采用独立、实且中心为零的高斯指针。固定 $\rho$、各投影和各正数 $g_j,\sigma_j$，再缩小共同尺度 $\varepsilon$。所有实验轮次都计入平均。}
+\end{frame}
+
+% Manuscript: §1, equation (1)
+\begin{frame}{两种次序都进入平均}
+令 $P(x,y)=(x,0)$，$Q(x,y)=((x+y)/2,(x+y)/2)$。从 $(0,1)$ 出发，$PQ$ 得 $(1/2,0)$，$QP$ 得零。
+\[
+ \mathcal J_P(X)=\tfrac12(PX+XP),\quad
+ X_n=P_n,\quad X_j=\mathcal J_{P_j}(X_{j+1}).
+\]
+\[
+ \mu_n=\operatorname{Tr}(\rho X_1),\qquad \rho\succeq0,\quad \operatorname{Tr}\rho=1.
+\]
+\note{投影保留子空间中的分量，故 $P=P^*=P^2$。厄米的嵌套乘积保证期望为实。密度矩阵把单位纯态的期望按非负权重平均。}
+\end{frame}
+
+% Manuscript: §3, rational witness
+\begin{frame}{三维中的一次点积}
+$P_1$ 保留直线 $(1,1,-1)$，$P_2$ 和 $P_3$ 分别保留平面 $y=z$ 和 $x=z$。令 $B=P_2P_3+P_3P_2$。
+\[
+ P_1e_3=\tfrac13(-1,-1,1)^{\mathsf T},\quad
+ Be_3=(3/4,3/4,1/2)^{\mathsf T}.
+\]
+\begin{bookresult}{pointer-refutation}
+纯态 $e_3$ 给出 $\mu_3=\tfrac12\langle P_1e_3,Be_3\rangle=-1/6<-1/8$，推翻普遍下界。
+\end{bookresult}
+\note{平面投影平均两个坐标。$P_2P_3e_3=(1/2,1/4,1/4)^{\mathsf T}$，而 $P_3P_2e_3=(1/4,1/2,1/4)^{\mathsf T}$。因为 $P_1$ 和 $B$ 都实对称，嵌套乘积的两项外层期望相同。Lean 所证明的结论是普遍命题的否定，等式是证据中的计算。}
+\end{frame}
+
+\section{精确界}
+\subsection{一步估计}
+% Manuscript: §2, Theorem 1
+\begin{frame}{任意长度的精确区间}
+\begin{bookresult}{sharp-bounds}
+对任意有限维正交投影和密度矩阵，
+\[
+ -c_n\le\mu_n\le1,\qquad c_1=0,\quad c_{r+1}=\frac{(1+c_r)^2}{8(1-c_r)}.
+\]
+下端点可在 $n$ 维以实余维一投影和纯态达到。恒等投影达到上端点。
+\end{bookresult}
+\[
+ c_2=\tfrac18,\quad c_3=\tfrac{81}{448},\quad c_4=\tfrac{279841}{1315328},
+ \qquad \tfrac13-c_n\sim\tfrac{16}{27n}.
+\]
+\note{量词覆盖所有 $d,n\ge1$，而下端点的构造选择 $d=n$。单次测量用零投影达到下端点。$c_n$ 严格增加到 $1/3$，故全长度下确界为 $-1/3$ 且在有限长度不取到。}
+\end{frame}
+
+% Manuscript: §2, equations (3)–(4)
+\begin{frame}{配方给出下一步}
+设 $X=aI+bH$，其中 $a=(1-c)/2$，$b=(1+c)/2$，$\|H\|\le1$。对单位态令 $s=\|P\psi\|\in[0,1]$。
+\[
+ as^2-bs\le\langle\psi,\mathcal J_P(X)\psi\rangle\le as^2+bs\le1.
+\]
+当 $0\le c\le1/3$，最低点 $s=b/(2a)$ 在区间内，最低值为 $-b^2/(4a)=-F(c)$。
+\note{$[{-c},1]$ 的中点为 $a$，半宽为 $b$。内积的剩余项为 $b\operatorname{Re}\langle P\psi,H\psi\rangle$，由 Cauchy--Schwarz 控制。$a+b=1$ 给上界。}
+\end{frame}
+
+\subsection{取等与极限}
+% Manuscript: §2, equations (5)–(6)
+\begin{frame}{每一步选一个新方向}
+在 $X=\operatorname{diag}(1,-c)$ 的平面，取单位向量 $\psi=(\alpha,\beta)^{\mathsf T}$，$p=(-\alpha,\beta)^{\mathsf T}$，令 $\beta^2-\alpha^2=b/(2a)$。投影到 $p$ 同时实现抛物线最低点和 Cauchy--Schwarz 取等。
+\[
+ (e_r,v_r)\text{ 平面}\quad\longrightarrow\quad
+ q_r=\beta_r e_r+\alpha_r v_r,\quad P_{n-r}=I-q_rq_r^{\mathsf T}.
+\]
+新最低特征向量是 $v_{r+1}=\alpha_r e_r+\beta_r v_r$。
+\note{归一化给出 $\alpha^2=(1-y)/2,\ \beta^2=(1+y)/2$，其中 $y=b/(2a)$。因为 $p=-H\psi$ 且 $P\psi=yp$，两侧的取等条件兼容。由 $P_n=I-e_0e_0^{\mathsf T}$ 开始。后续各步固定未用的基向量，因此总能找到特征值为 $1$ 的新方向 $e_r$。}
+\end{frame}
+
+% Manuscript: §2, Theorem 1 and ordered product comparison
+\begin{frame}{有限长度下界趋于 $-1/3$}
+\[
+ F(c)-c=\frac{(1-3c)^2}{8(1-c)},\qquad
+ \tfrac13-F(c)=\frac{(1-3c)(c+5)}{24(1-c)}.
+\]
+从 $c_1=0$ 出发，严格递增趋向固定点 $1/3$。Abbott 等人的有序弱值可趋于 $-1$。与该参照点相比，指针最小值的距离为 $1-c_n>2/3$。
+\medskip
+
+递推与渐近率来自 Sun、Luo 和 Ye。一步 Jordan 谱估计源于 Strang。
+\note{强调长度极限与固定长度的弱耦合极限各有自己的变量。两者的差距来自 Jordan 递推保持区间 $[-1/3,1]$。渐近证明见附录。}
+\end{frame}
+
+\section{推广与证据}
+\subsection{一般输入}
+% Manuscript: §2, Corollaries 2 and 4
+\begin{frame}{哪些谱条件保留界？}
+\begin{bookresult}{positive-contractions}
+若 $0\preceq A_j\preceq I$，最小值仍为 $-c_n$，最大值仍为 $1$。按谱阈值将 $A_j$ 展开成投影的凸组合。
+\end{bookresult}
+\begin{bookresult}{commuting-symmetric}
+对易投影使两种期望都落在 $[0,1]$。对一般厄米矩阵，$|\mu_n|\le\prod_j\|A_j\|$。光谱关于零对称时，两端就是光谱值乘积的两端。
+\end{bookresult}
+\note{按阈值分解的系数是相邻特征值之差，最后以零投影补足权重。多重线性保留区间，投影仍可取到两端。对易时两个递推都是同一投影 $P_1\cdots P_n$。范数界来自三角不等式及次乘性。有零输入时乘积范围和系数同为零。}
+\end{frame}
+
+% Manuscript: §1 and §2, Corollary 3
+\begin{frame}{正耦合强度下的高斯包络}
+令 $t=e^{-h^2/(8\sigma^2)}$。一次归一化读数的矩阵映射是
+\[
+ T_{P,t}(Y)=t\mathcal J_P(Y)+(1-t)PYP.
+\]
+\begin{bookresult}{gaussian-envelope}
+独立、实、中心为零的高斯指针对任意 $h_j>0$ 都有 $-c_n\le m_n\le1$。$T_{P_n,t_n}(I)=P_n$，所以末指针的宽度与耦合不影响 $m_n$。
+\end{bookresult}
+\note{两个平移高斯的乘积配方后给出重叠系数。$PYP$ 保持 $[-cI,I]$，而 Jordan 项落在 $[-F(c)I,I]$，所以加权平均也落在后者。不断减小耦合可逼近弱极限下端点。固定正耦合的精确下端点留给进一步分析。}
+\end{frame}
+
+\subsection{来源与范围}
+% Manuscript: §4; references
+\begin{frame}{来源与证据范围}
+Lean 证明普遍 $-1/8$ 下界的否定。原论文的书面论证给出一般的界、取等、渐近率和三个推论。固定 $d<n$ 的最小值，以及 $n\ge3$ 时全秩一的最小值，超出取等构造的范围。
+\smallskip
+\begin{itemize}
+\item Ma 与 Zhang，\href{https://doi.org/10.5281/zenodo.24212412}{原论文，版本 2}。
+\item Abbott 等人，\href{https://doi.org/10.22331/q-2019-10-14-194}{Quantum 3, 194 (2019)}，§4 与附录 C。
+\item \href{https://arxiv.org/abs/1503.06387v3}{Sun、Luo 和 Ye，§6.2、§6.4}。 \href{https://doi.org/10.2307/2312733}{Strang，1962}。
+\end{itemize}
+\note{原问题来自 Abbott 等人的式 (26) 之后。原论文 §3 给出三维反例。正式化精确界、三个推论的共享任务见结论卡片中的链接。}
+\end{frame}
+
+\appendix
+% Manuscript: §2, final paragraph of the proof of Theorem 1
+\begin{frame}{如何得到 $1/n$ 的收敛率？}
+令 $\delta_n=\tfrac13-c_n$。从递推直接得到
+\[
+ \frac1{\delta_{n+1}}-\frac1{\delta_n}
+ =\frac{27}{16-3\delta_n}\longrightarrow\frac{27}{16}.
+\]
+对相邻差求和后除以 $n$，得 $1/(n\delta_n)\to27/16$，也就是 $\delta_n\sim16/(27n)$。
+\note{每一项 $\delta_n>0$，故可取倒数。相邻差的平均有同一极限，而第一项 $1/(n\delta_1)$ 趋于零。}
+\end{frame}
+
+% Manuscript: §4, coverage and verification
+\FormalVerification
+\end{document}

@@ -1,0 +1,17 @@
+[book]
+version = "2"
+authors = ["Haobo Ma", "Wenlin Zhang"]
+license = "CC-BY-4.0"
+editions = ["zh", "en"]
+date = "2026-11-14"
+[book.title]
+zh = "Extending Sun–Luo–Ye bounds to refute Abbott et al.'s pointer-product conjecture"
+en = "Extending Sun–Luo–Ye bounds to refute Abbott et al.'s pointer-product conjecture"
+[outputs]
+html = true
+pdf = ["academic"]
+epub = true
+[mathesis]
+work = "abbott-2019-sequential-weak-pointer-bound"
+version = 2
+source_title = "Extending Sun–Luo–Ye bounds to refute Abbott et al.'s pointer-product conjecture"

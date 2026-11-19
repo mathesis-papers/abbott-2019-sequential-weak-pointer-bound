@@ -1,0 +1,10 @@
+kind = "academic"
+editions = ["zh", "en"]
+aspect = "4:3"
+structure_colour = "#0e2c8e"
+short_author = "Haobo Ma, Wenlin Zhang"
+short_title = "Weak pointer products"
+
+[title]
+zh = "弱测量指针乘积的精确下界"
+en = "Sharp bounds for weak-measurement pointer products"

@@ -1,0 +1,14 @@
+[site]
+repo = "mathesis-papers/abbott-2019-sequential-weak-pointer-bound"
+base_url = "https://papers.trureturing.org/abbott-2019-sequential-weak-pointer-bound/"
+post_build = ["python3", "-c", "from pathlib import Path\nimport runpy\nscript = Path(\"docs/layer-mathesis/scripts/site.py\")\nif script.is_file():\n    runpy.run_path(str(script), run_name=\"__main__\")\nelse:\n    print(\"Mathesis post-build skipped: layer script is absent from repository being built\")\n"]
+languages = ["zh", "en"]
+[site.title]
+zh = "Extending Sun–Luo–Ye bounds to refute Abbott et al.'s pointer-product conjecture"
+en = "Extending Sun–Luo–Ye bounds to refute Abbott et al.'s pointer-product conjecture"
+[trureturing]
+repo = "the-omega-institute/trureturing"
+branch = "dev"
+[books]
+order = ["abbott-2019-sequential-weak-pointer-bound"]
+hide = []

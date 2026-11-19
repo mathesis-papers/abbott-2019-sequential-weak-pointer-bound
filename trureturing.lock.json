@@ -1,0 +1,17 @@
+{
+  "schema": "trureturing-books.lock.v1",
+  "repo": "the-omega-institute/trureturing",
+  "branch": "dev",
+  "commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+  "pinned_at": "2026-11-08T12:32:04Z",
+  "declarations": {
+    "D5/S3/Quantum/Measurement/Weak/SequentialWeakPointerRefutation.result": {
+      "module": "D5/S3/Quantum/Measurement/Weak/SequentialWeakPointerRefutation",
+      "name": "D5.S3.Quantum.Measurement.Weak.SequentialWeakPointerRefutation.result",
+      "kind": "theorem",
+      "statement_id": "sha256:eb883ff2832028ab86ee6939c9c1c35dd0c99067e52128282c66caf7bb1f2c1c",
+      "line": 69,
+      "signature": "theorem result : ¬ claim"
+    }
+  }
+}
