@@ -1,0 +1,29 @@
+{
+  "duration": "2:11",
+  "id": "001-pointer-product",
+  "lean": [
+    "D5/S3/Quantum/Measurement/Weak/SequentialWeakPointerRefutation.result"
+  ],
+  "narration": {
+    "engine": "Kokoro-82M v1.0 (onnx)",
+    "language": "en",
+    "voice": "af_heart"
+  },
+  "outputs": {
+    "cover": "abbott-2019-sequential-weak-pointer-bound_001_cover.jpg",
+    "narrated_720p": "abbott-2019-sequential-weak-pointer-bound_001_720p_narrated.mp4"
+  },
+  "publication_basis": "pinned",
+  "released": "2026-11-19",
+  "resolution": "1280x720@30",
+  "style": "trureturing cyberpunk · deterministic canvas",
+  "subject": "https://github.com/the-omega-institute/trureturing",
+  "subtitles": [
+    "zh",
+    "en"
+  ],
+  "summary": "A three-dimensional dot product refutes the proposed bound. A quadratic and its minimum explain the exact floor as more projections enter the measurement sequence.",
+  "summary_zh": "用三维点积推翻原有下界，再用二次函数的最低点求出任意长度的精确下界。",
+  "title": "Three pointers below −1/8",
+  "title_zh": "三个指针为何能低于 −1/8？"
+}

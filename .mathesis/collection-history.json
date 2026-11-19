@@ -1,0 +1,23 @@
+{
+  "schema": "mathesis.collection-history.v1",
+  "sha256": {
+    "versions/v2/.mathesis/generated.json": "734277801f9e1392b99938a6182346b7cc612ca09de79d45febb9b1f20719477",
+    "versions/v2/CHANGELOG.md": "0d938bfe4a3cf20d44b58d4878fbff256029b7b2c7ceb311d59c33be0ec1fc48",
+    "versions/v2/CITATION.cff": "032836646a85bfa72297690c20158cb5f18aa6a61a81111b6a5fec7de92be10e",
+    "versions/v2/CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
+    "versions/v2/LICENSES/CC-BY-4.0.txt": "58230517b7895aa219ff46a6ed63e67057a1582fb9ea054b16728a8c13525650",
+    "versions/v2/README.md": "833056f7809b4e3b21906fe6ca6dc90f05c338907f4ccfccf942c11c7f410615",
+    "versions/v2/formalization/nodes.json": "b1248dd83d8bbbca6c43a40d4214f791acd8f830ecf9c3f30a60d92847c1c7c5",
+    "versions/v2/manuscript/README.md": "c1beaf6e7e62d46ae8e8a290c481c3316e2af6a5f61b8c3b6f0fc98117db787b",
+    "versions/v2/manuscript/metadata.json": "50582e18902d5dd64adb235b354e77119ff21be4e364738d4d0a9db144db0bce",
+    "versions/v2/manuscript/note.tex": "be88abca77659a879bca77ea54205614f48708a4c754b7811c9a092fa5045c31",
+    "versions/v2/manuscript/requirements.txt": "2f9c772f32456d897fe7f7535941e02234d1880081c57d604348a529bfbdc473",
+    "versions/v2/manuscript/verification.json": "33aa61bfe0ad15d8a359a3f21e0895dfdf3a55d3215924b76327d6e83913fc38",
+    "versions/v2/manuscript/verify.py": "3203ab17d0144449074730e0e12afcf9b11224bfc65e62d88aa8e21ca8506dc6",
+    "versions/v2/paper.json": "ef470cadff6a85e307bf2eeb02fc87c614188a44b30e6f4f1552b0c1da08c2ea",
+    "versions/v2/paper.pdf": "e4ca73e37356301dc848fd0b91405066a52c8a635666ec10b3e5176e75cb0347",
+    "versions/v2/source.archive": "98ca2b3100b6a0d6d57ee2e1e44a2364c7c6370d874a23017d567daadaa431b6"
+  },
+  "source_commit": "4e0c0ff759e9bbe2f9549fa9dc0f0bd27d09043d",
+  "work": "abbott-2019-sequential-weak-pointer-bound"
+}
