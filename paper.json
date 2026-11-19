@@ -2,16 +2,16 @@
   "files": {
     "pdf": {
       "bytes": 88686,
-      "matches_public": null,
+      "matches_public": true,
       "path": "paper.pdf",
-      "public_sha256": null,
+      "public_sha256": "e4ca73e37356301dc848fd0b91405066a52c8a635666ec10b3e5176e75cb0347",
       "sha256": "e4ca73e37356301dc848fd0b91405066a52c8a635666ec10b3e5176e75cb0347"
     },
     "source": {
       "bytes": 15823,
-      "matches_public": null,
+      "matches_public": true,
       "path": "source.archive",
-      "public_sha256": null,
+      "public_sha256": "98ca2b3100b6a0d6d57ee2e1e44a2364c7c6370d874a23017d567daadaa431b6",
       "sha256": "98ca2b3100b6a0d6d57ee2e1e44a2364c7c6370d874a23017d567daadaa431b6"
     }
   },
@@ -38,6 +38,8 @@
     "license": "CC-BY-4.0",
     "msc": [],
     "pdf": {
+      "bytes": 88686,
+      "sha256": "e4ca73e37356301dc848fd0b91405066a52c8a635666ec10b3e5176e75cb0347",
       "url": "/api/v1/collected-papers/abbott-2019-sequential-weak-pointer-bound/files/pdf?version=2"
     },
     "previous_version": null,
@@ -46,6 +48,8 @@
     "record": "abbott-2019-sequential-weak-pointer-bound",
     "repository_name": "abbott-2019-sequential-weak-pointer-bound",
     "source": {
+      "bytes": 15823,
+      "sha256": "98ca2b3100b6a0d6d57ee2e1e44a2364c7c6370d874a23017d567daadaa431b6",
       "url": "/api/v1/collected-papers/abbott-2019-sequential-weak-pointer-bound/files/source?version=2"
     },
     "title": "Extending Sun–Luo–Ye bounds to refute Abbott et al.'s pointer-product conjecture",
