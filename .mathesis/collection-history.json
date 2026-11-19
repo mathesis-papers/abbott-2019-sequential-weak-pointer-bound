@@ -18,6 +18,6 @@
     "versions/v2/paper.pdf": "e4ca73e37356301dc848fd0b91405066a52c8a635666ec10b3e5176e75cb0347",
     "versions/v2/source.archive": "98ca2b3100b6a0d6d57ee2e1e44a2364c7c6370d874a23017d567daadaa431b6"
   },
-  "source_commit": "6171bfb27f0bcd3c4b11bc4cc94f2047a42dc6a4",
+  "source_commit": "4e0c0ff759e9bbe2f9549fa9dc0f0bd27d09043d",
   "work": "abbott-2019-sequential-weak-pointer-bound"
 }
